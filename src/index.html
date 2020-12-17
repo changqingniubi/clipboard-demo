@@ -1,0 +1,24 @@
+<html>
+  <header>
+
+  </header>
+  <body>
+
+    <input id="foo" type="text" value="大家好，我是阿宝哥">
+    <button class="btn" data-clipboard-action="copy" data-clipboard-target="#foo">复制</button>
+    
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+  <script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function(e) {
+      console.log(e);
+    });
+      
+    clipboard.on('error', function(e) {
+      console.log(e);
+    });
+
+  </script>
+</html>
